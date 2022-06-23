@@ -34,7 +34,6 @@ public class Main {
             e.printStackTrace();
         }
     }
-
     public static boolean checkvalue(int checkedvalue) {
         String SQL = "Select * from test where ID=?;";
         try (PreparedStatement statement = connection.prepareStatement(SQL)) {
