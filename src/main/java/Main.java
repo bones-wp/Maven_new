@@ -34,7 +34,6 @@ public class Main {
             e.printStackTrace();
         }
     }
-
     public static boolean checkvalue(int checkedvalue) {
         String SQL = "Select * from test where ID=?;";
         try (PreparedStatement statement = connection.prepareStatement(SQL)) {
@@ -51,7 +50,7 @@ public class Main {
     }
 
     public static boolean insertvalue(int insertedvalue) {
-        String SQL = "insert  test(id) values(?)";
+        String SQL = "insert  into test(id) values(?)";
         try (PreparedStatement statement = connection.prepareStatement(SQL)) {
             statement.setInt(1, insertedvalue);
             int i = statement.executeUpdate();
